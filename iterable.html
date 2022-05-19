@@ -20,6 +20,8 @@
     // 이터레이터: { value, done } 객체를 리턴하는 next() 를 가진 값
     // 이터러블/이터레이터 프로토콜: 어런 이터러블을 연산자나 문법과 함께 동작하도록 하는 규약
 
+    // 이터레이터는 이터레이터이자 이터러블입니다. (이터레이터도 [Symbol.iterator]() 메서드를 가지고 있습니다.)
+    // 이터레이터의 심볼 이터레이터 메서드의 실행결과는 자기 자신입니다.
     // Array는 이터레이터를 리턴하는 메서드를 가져서 Array는 이터러블이다.
     // log(arr[Symbol.iterator]()); // Array iterator
     const iterator = arr[Symbol.iterator]();
@@ -34,6 +36,17 @@
       log('index is ' + index);
       log('value is ' + value);
     }
+
+    let arrs = [];
+    while (1) {
+      const value = iterator.next();
+      if (value.done === true) {
+        break;
+      } else {
+        arrs.push(value.value);
+      }
+    }
+    log(arrs)
   </script>
 </body>
 </html>
