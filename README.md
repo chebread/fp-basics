@@ -3,9 +3,9 @@ This is js JavaScript functional programming basics.
 
 ## Index
 - [Iterable/Iterator protocall](./iterable.html)
-- [Generator](./generator.html)
-- [Map / Filter / Reduce](./map-filter-reduce.html)
-- [go / pipe / curry](./go-pipe-curry.html)
+- [Generator function](./generator.html)
+- [Map / Filter / Reduce function](./map-filter-reduce.html)
+- [go / pipe / curry function](./go-pipe-curry.html)
 - [Callback / Promise](./callback-promise.html)
 
 ## License
