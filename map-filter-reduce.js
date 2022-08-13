@@ -43,6 +43,7 @@ log(map(a => a * a, gen())); // 1, 4
 const filter = (f, iter) => {
   let res = [];
   for (const a of iter) {
+    log(`filter: ${a}`);
     if (f(a)) {
       res.push(a); // A' => a는 object이지만 f가 price만 보기에 반환은 object가 된다는 점
     }
